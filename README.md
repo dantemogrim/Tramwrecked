@@ -16,6 +16,9 @@ Requirement - .NET Core ???
 1. Clone down this repo.
 2. After opening the file folder go to:
 `'bin' -> 'Debug' -> net5.0 -> 'ref' -> ... ???`
+3. Open up your native Terminal app.
+write `dotnet` + `space` and then drag and drop the file that ends with `.dll`
+4. Hit `Return` + `Enter` and you're off! :railway_car: :dash:
 
 ## :computer: Testers
 
