@@ -1,14 +1,21 @@
-# Text-Adventure
-<img src="https://media.giphy.com/media/hrKmmzitRaGcg/giphy.gif" width="75%">
+# Tramwrecked
+
+<img src="https://media.giphy.com/media/j1s8wrCO6uNeEkyKLj/giphy.gif" width="75%">
 
 First ever chool project in C#.
 
 ## :shipit: About
 
 
-## :octocat: How to Play
+## :octocat: "How do I play this game thing?"
 
 (screen recorded gif instruction)
+
+Requirement - .NET Core ???
+
+1. Clone down this repo.
+2. After opening the file folder go to:
+`'bin' -> 'Debug' -> net5.0 -> 'ref' -> ... ???`
 
 ## :computer: Testers
 
