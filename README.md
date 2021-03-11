@@ -1,8 +1,8 @@
 # Tramwrecked
 
-<img src="https://media.giphy.com/media/j1s8wrCO6uNeEkyKLj/giphy.gif" width="75%">
+<img src="https://media.giphy.com/media/knpb2bGRiqf8A/giphy.gif" width="75%">
 
-First ever chool project in C#.
+A console application made in C#.
 
 ## :shipit: About
 
