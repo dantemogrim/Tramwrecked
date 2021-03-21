@@ -4,14 +4,12 @@
 
 A console application made in C#.
 
-## :shipit: About
+## :busstop: About
 
 
-## :octocat: "How do I play this game thing?"
+## :metro: "How do I play?"
 
 (screen recorded gif instruction)
-
-Requirement - .NET Core ???
 
 1. Clone down this repo.
 2. After opening the file folder go to:
@@ -20,15 +18,15 @@ Requirement - .NET Core ???
 write `dotnet` + `space` and then drag and drop the file that ends with `.dll`
 4. Hit `Return` + `Enter` and you're off! :railway_car: :dash:
 
-## :computer: Testers
+## :checkered_flag: Testers
 
-- [Person 1](https://github.com/mogrim-91)
-- [Person 2](https://github.com/mogrim-91)
+- :train: [Person 1](https://github.com/mogrim-91)
+- :railway_car: [Person 2](https://github.com/mogrim-91)
 
 ## :man_technologist: Creator
 
 [Dante Mogrim](https://github.com/mogrim-91)
 
-## :fleur_de_lis: License
+## :ticket: License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License)
