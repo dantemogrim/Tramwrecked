@@ -1,0 +1,15 @@
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/bin/Debug/net5.0/Tramwrecked.deps.json
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/bin/Debug/net5.0/Tramwrecked.runtimeconfig.json
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/bin/Debug/net5.0/Tramwrecked.runtimeconfig.dev.json
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/bin/Debug/net5.0/Tramwrecked.dll
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/bin/Debug/net5.0/ref/Tramwrecked.dll
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/bin/Debug/net5.0/Tramwrecked.pdb
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.csprojAssemblyReference.cache
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.AssemblyInfoInputs.cache
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.AssemblyInfo.cs
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.csproj.CoreCompileInputs.cache
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.dll
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/ref/Tramwrecked.dll
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.pdb
+/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/Debug/net5.0/Tramwrecked.genruntimeconfig.cache
