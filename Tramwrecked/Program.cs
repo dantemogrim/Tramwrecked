@@ -62,7 +62,7 @@ namespace Tramwrecked
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(menuTitle);
-            
+
 
             var menuOptions = new List<string>()
             {
@@ -158,7 +158,7 @@ namespace Tramwrecked
             }
 
         }
-        
+
         public static void playerPresets()
         {
 
@@ -173,10 +173,10 @@ namespace Tramwrecked
             };
 
 
-        int randomizer = random.Next(0, 4);
-        string randomCatchphrase = catchphraseArray[randomizer];
+            int randomizer = random.Next(0, 4);
+            string randomCatchphrase = catchphraseArray[randomizer];
 
-        //string currentPlayerName;
+
             Console.WriteLine("First thing's first. What's your name?");
             Console.Write("NAME: ");
             var player = new Player(Console.ReadLine());
@@ -216,62 +216,62 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - RED - Wait for him, of course.");
+            Console.WriteLine("A - RED game over - Wait for him, of course.");
             Console.WriteLine("B - GREEN - Depart immediately!");
             Console.WriteLine("C - YELLOW - I can't give special treatment to everyone who is late.");
             Console.WriteLine("I'm departing as estimated with or without him.");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
-            
+
             choice = Console.ReadLine();
             Console.Clear();
-            
+
 
             switch (choice)
             {
                 case "A":
                 case "a":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no! Once the kid reaches you he parks himself by the door");
-                    Console.WriteLine("waiting for his other friends to join too from half a mile away.");
-                    Console.WriteLine("You depart 5 minutes late and your tardiness domino'es the rest of the way.");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameOver();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Oh, no! Once the kid reaches you he parks himself by the door");
+                        Console.WriteLine("waiting for his other friends to join too from half a mile away.");
+                        Console.WriteLine("You depart 5 minutes late and your tardiness domino'es the rest of the way.");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        gameOver();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("The kid is holding an ice cream in his hand.");
-                    Console.WriteLine("As soon as he sees you're about to drive away from him, he chugs it towards you.");
-                    Console.WriteLine("Your windshield now has a bunch of ice cream mush on it but hey, at least your in time!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    secondEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("The kid is holding an ice cream in his hand.");
+                        Console.WriteLine("As soon as he sees you're about to drive away from him, he chugs it towards you.");
+                        Console.WriteLine("Your windshield now has a bunch of ice cream mush on it but hey, at least your in time!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        secondEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Oh, no! You struggle a bit but you're hanging in there!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    secondEncounter();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no! You struggle a bit but you're hanging in there!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        secondEncounter();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    var deadEnd = @"
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
                                                        _                
                                                       /_\            
@@ -294,26 +294,26 @@ namespace Tramwrecked
                                                       )|| | _.-
                                                      (  .-'
                     ";
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write(deadEnd);
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    firstEncounter();
-                    break;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        firstEncounter();
+                        break;
 
-                }
+                    }
             }
         }
 
-        
+
         // 2ND
         public static void secondEncounter()
         {
             Console.Clear();
-            
+
             string choice;
-            
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("2. POSITION: Galileis Gata facing Januarigatan.");
             Console.ResetColor();
@@ -322,9 +322,9 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - 'You had me wait for you but you have no idea where I am going?'");
-            Console.WriteLine("B - 'That's a good question. I have no idea, sorry.'");
-            Console.WriteLine("C - Tell him number 11.");
+            Console.WriteLine("A - green - 'You had me wait for you but you have no idea where I am going?'");
+            Console.WriteLine("B - yellow -  'That's a good question. I have no idea, sorry.'");
+            Console.WriteLine("C - green - Tell him number 11.");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -337,51 +337,71 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Great job!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameOver();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Great job!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        thirdEncounter();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    thirdEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        thirdEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Great job!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Great job!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        thirdEncounter();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    secondEncounter();
-                    break;
+                    {
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        secondEncounter();
+                        break;
+
+                    }
 
 
             }
@@ -414,7 +434,7 @@ namespace Tramwrecked
             ───▐██──▀▀──▀▀──██▌───
             ──▄████▄──▐▌──▄████▄──
 
-            ", 
+            ",
             @"
 
             ─▄▄█────────▄▄█
@@ -446,7 +466,7 @@ namespace Tramwrecked
             ",
 
 
-            }; 
+            };
 
 
             int randomizer = random.Next(0, 4);
@@ -462,9 +482,9 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - Ask him politely to make a decision.");
-            Console.WriteLine("B - Ask him what is going on.");
-            Console.WriteLine("C - Pay him no mind and drive off without him.");
+            Console.WriteLine("A - yellow - Ask him politely to make a decision.");
+            Console.WriteLine("B - green - Ask him what is going on.");
+            Console.WriteLine("C - yellow - Pay him no mind and drive off without him.");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -474,21 +494,21 @@ namespace Tramwrecked
 
             if (choice == "A" || choice == "a")
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Oh, no!");
                 Console.ResetColor();
                 fourthEncounter();
             }
             if (choice == "B" || choice == "b")
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("^⨀ᴥ⨀^");
                 Console.ResetColor();
                 fourthEncounter();
             }
             else if (choice == "C" || choice == "c")
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Oh, no!");
                 Console.ResetColor();
                 fourthEncounter();
@@ -496,20 +516,42 @@ namespace Tramwrecked
             else
             {
                 // If player types something else than the options above.
+                var deadEnd = @"
+
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Confused? Here's a hint.");
-                Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                Console.WriteLine("Try and get it right this time. You got this!");
+                Console.Write(deadEnd);
                 Console.ResetColor();
                 Console.ReadKey();
                 Console.Clear();
-                fourthEncounter();
+                thirdEncounter();
+               
             }
         }
+    
 
-
-            // 4TH
-            public static void fourthEncounter()
+        // 4TH
+        public static void fourthEncounter()
         {
             Console.Clear();
             string choice;
@@ -522,9 +564,9 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - Next stop you ask the woman why she wouldn't listen, after you asked her nicely.");
-            Console.WriteLine("B - (CONTINUE)");
-            Console.WriteLine("C - (WIN)");
+            Console.WriteLine("A - WIN - Next stop you ask the woman why she wouldn't listen, after you asked her nicely.");
+            Console.WriteLine("B - green - continue - ");
+            Console.WriteLine("C - yellow");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -537,68 +579,89 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("The woman looks up at you with disgust and blurts out:");
-                    Console.WriteLine("'WIN!'");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameOver();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("The woman looks up at you with disgust and blurts out:");
+                        Console.WriteLine("'WIN!'");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        gameWon();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Great job!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    fifthEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Great job!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        fifthEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        fifthEncounter();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    fourthEncounter();
-                    break;
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        fourthEncounter();
+                        break;
+
+                    }
 
 
             }
-            
-            
-            
+
+
+
         }
-        
-        
+
+
         // 5TH
         public static void fifthEncounter()
         {
-            
+
             Console.Clear();
-            
+
             string choice;
 
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -609,9 +672,9 @@ namespace Tramwrecked
             Console.WriteLine("What do you do?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - (WIN)");
-            Console.WriteLine("B - (CONTINUE)");
-            Console.WriteLine("C - (CONTINUE)");
+            Console.WriteLine("A - yellow");
+            Console.WriteLine("B - green - ");
+            Console.WriteLine("C - yellow - ");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -624,67 +687,88 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameOver();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        sixthEncounter();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Great job!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    sixthEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Great job!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        sixthEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh no!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    sixthEncounter();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh no!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        sixthEncounter();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    fifthEncounter();
-                    break;
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        fifthEncounter();
+                        break;
+
+                    }
 
 
             }
-            
-            
-            
-            
+
+
+
+
         }
-        
+
         // 6TH
         public static void sixthEncounter()
         {
-            
+
             Console.Clear();
-            
+
             string choice;
 
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -696,9 +780,9 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - (WIN) ");
-            Console.WriteLine("B - (GAME OVER)");
-            Console.WriteLine("C - (WIN)");
+            Console.WriteLine("A - yellow - ");
+            Console.WriteLine("B - green - ");
+            Console.WriteLine("C - red lose - ");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -711,56 +795,77 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameOver();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        seventhEncounter();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Great job!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    seventhEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Great job!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        seventhEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("You lose!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("You lose!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        gameOver();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    sixthEncounter();
-                    break;
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        sixthEncounter();
+                        break;
+
+                    }
 
 
             }
-            
+
         }
 
         // 7TH
@@ -780,7 +885,7 @@ namespace Tramwrecked
             int randomizer = random.Next(0, 3);
             string randomLanguage = languageArray[randomizer];
 
-            
+
             string choice;
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -792,9 +897,9 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - Answer ''");
-            Console.WriteLine("B - Answer ''");
-            Console.WriteLine("C - Pick up your jacket, leave and walk away from everything.");
+            Console.WriteLine("A - Green - Answer ''");
+            Console.WriteLine("B - Yellow - Answer ''");
+            Console.WriteLine("C - Yellow - Pick up your jacket, leave and walk away from everything.");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -807,63 +912,84 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Great job!");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameOver();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Great job!");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        eigthEncounter();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    eigthEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        eigthEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        eigthEncounter();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    seventhEncounter();
-                    break;
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        ninthEncounter();
+                        break;
+
+                    }
 
 
             }
-            
+
         }
-        
-        
+
+
         // 8TH
         public static void eigthEncounter()
         {
-            
+
             Console.Clear();
             string choice;
 
@@ -876,9 +1002,9 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - (GAME OVER) ");
-            Console.WriteLine("B - I go and check for whatever rascal pulled one of the emergency breaks and reset it.");
-            Console.WriteLine("C - (WIN) ");
+            Console.WriteLine("A - red lose - ");
+            Console.WriteLine("B - green - I go and check for whatever rascal pulled one of the emergency breaks and reset it.");
+            Console.WriteLine("C - yellow ");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
@@ -891,63 +1017,84 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {   // Final 'game over' pitfall.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("You died!");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    gameOver();
-                    break;
-                }
+                    {   // Final 'game over' pitfall.
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("You died!");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        gameOver();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("B-i-n-g-o! A gold star to you!");
-                    Console.WriteLine("Onwards and upwards, here we go!");
-                    Console.ResetColor();
-                    ninthEncounter();
-                    break;
-                }
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("B-i-n-g-o! A gold star to you!");
+                        Console.WriteLine("Onwards and upwards, here we go!");
+                        Console.ResetColor();
+                        ninthEncounter();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Oh, no!");
-                    Console.ResetColor();
-                    ninthEncounter();
-                    break;
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Oh, no!");
+                        Console.ResetColor();
+                        ninthEncounter();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    eigthEncounter();
-                    break;
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        eigthEncounter();
+                        break;
+
+                    }
 
 
             }
-            
+
         }
-        
+
         // 9
         public static void ninthEncounter()
         {
-            
+
             Console.Clear();
-            
-            
+
+
             string choice;
 
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -983,7 +1130,7 @@ namespace Tramwrecked
 
                 if (choice == "B" || choice == "b")
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Oh, no!");
                     Console.ResetColor();
                     tenthEncounter();
@@ -999,25 +1146,47 @@ namespace Tramwrecked
                 else
                 {
                     // If player types something else than the options above.
+                    var deadEnd = @"
+
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
+                    Console.Write(deadEnd);
                     Console.ResetColor();
                     Console.ReadKey();
                     Console.Clear();
                     ninthEncounter();
+                    break;
                 }
 
-       
+
             }
         }
-        
+
         public static void tenthEncounter()
         {
-            
+
             Console.Clear();
-            
+
             string choice;
 
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -1047,57 +1216,80 @@ namespace Tramwrecked
             {
                 case "A":
                 case "a":
-                {   // Alternative ending 1.
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("You died!");
-                    Console.WriteLine("Press 'Enter' to continue.");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
-                }
+                    {   // Alternative ending 1.
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("You died!");
+                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        gameWon();
+                        break;
+                    }
 
                 case "B":
                 case "b":
-                {   // Alternative ending 2.
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("(ﾉ≧∀≦)ﾉ");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
-                }
+                    {   // Alternative ending 2.
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("(ﾉ≧∀≦)ﾉ");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        gameWon();
+                        break;
+                    }
 
                 case "C":
                 case "c":
-                {   // Alternative ending 3.
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("ヽ/❀o ل͜ o|ﾉ");
-                    Console.ResetColor();
-                    Console.ReadLine();
-                    gameWon();
-                    break;
+                    {   // Alternative ending 3.
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("ヽ/❀o ل͜ o|ﾉ");
+                        Console.ResetColor();
+                        Console.ReadLine();
+                        gameWon();
+                        break;
 
-                }
+                    }
                 default:
-                {
-                    // If player types something else than the options above.
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Confused? Here's a hint.");
-                    Console.WriteLine("Type the capital letter of your answer and hit 'Enter/Return'.");
-                    Console.WriteLine("Try and get it right this time. You got this!");
-                    Console.ResetColor();
-                    Console.ReadKey();
-                    Console.Clear();
-                    tenthEncounter();
-                    break;
+                    {
+                        // If player types something else than the options above.
+                        var deadEnd = @"
 
-                }
+                                                       _                
+                                                      /_\            
+            Confused? Here's a hint.                 // \\      
+            Type the letter of your answer          //   \\      
+            then hit 'Enter/Return'.               //   .-.\   
+            Try and get it right this time.       ///--//-')\   
+            You got this!                        // \-//--' \\    
+                                                ((   ((      ))      
+                                                 \\  DEAD   //        
+                                                  \\ END   //         
+                                                   \\     //              
+                                                    \\   //    ..--            
+                                                     \\_//| -'                  
+                                                ..--  \_/ |               
+                                                       || |              
+                                                       || |              
+                                                       || |          
+                                                       || |     ..-- 
+                                                      )|| | _.-
+                                                     (  .-'
+                    ";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(deadEnd);
+                        Console.ResetColor();
+                        Console.ReadKey();
+                        Console.Clear();
+                        tenthEncounter();
+                        break;
+
+                    }
 
 
             }
-            
+
         }
+
+
         
         public static void gameOver()
         {

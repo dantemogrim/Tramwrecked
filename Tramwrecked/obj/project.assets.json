@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/Tramwrecked.csproj",
+      "projectUniqueName": "/Users/dante/Developer/CS/Game/Tramwrecked/Tramwrecked.csproj",
       "projectName": "Tramwrecked",
-      "projectPath": "/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/Tramwrecked.csproj",
+      "projectPath": "/Users/dante/Developer/CS/Game/Tramwrecked/Tramwrecked.csproj",
       "packagesPath": "/Users/dante/.nuget/packages/",
-      "outputPath": "/Users/dante/Desktop/c/Tramwrecked/Tramwrecked/obj/",
+      "outputPath": "/Users/dante/Developer/CS/Game/Tramwrecked/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dante/.config/NuGet/NuGet.Config"
