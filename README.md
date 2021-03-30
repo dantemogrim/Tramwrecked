@@ -2,28 +2,21 @@
 
 <img src="https://media.giphy.com/media/knpb2bGRiqf8A/giphy.gif" width="75%">
 
-A console application made in C#.
-
 ## :busstop: About
 
+A console application text adventure made in C#.
+Inspired by four years of working as a tram driver and watching movies like Taxi Driver. Hope you like it!
 
-## :metro: "How do I play?"
+## :metro: How to Play
 
-(screen recorded gif instruction)
+<img src="terminal.gif" width="75%">
 
 1. Clone down this repo.
-2. After opening the file folder go to:
-`'bin' -> 'Debug' -> net5.0 -> 'ref' -> ... ???`
-3. Open up your native Terminal app.
-write `dotnet` + `space` and then drag and drop the file that ends with `.dll`
-4. Hit `Return` + `Enter` and you're off! :railway_car: :dash:
+2. Open up your native Terminal app.
+   write `dotnet` + `space` and then drag and drop the file that ends with `.dll`
+3. Hit `Return` + `Enter` and you're off! :railway_car: :dash:
 
-## :checkered_flag: Testers
-
-- :train: [Person 1](https://github.com/mogrim-91)
-- :railway_car: [Person 2](https://github.com/mogrim-91)
-
-## :man_technologist: Creator
+## :checkered_flag: Creator
 
 [Dante Mogrim](https://github.com/mogrim-91)
 
