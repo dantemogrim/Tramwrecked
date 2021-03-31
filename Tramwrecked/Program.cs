@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-
 
 namespace Tramwrecked
 {
@@ -38,7 +36,7 @@ namespace Tramwrecked
                                    Hit 'Enter/Return' to begin.
 
                  Some content may or may not be based off of true accounts. PG-13
-            ";
+                                                                                    ";
             Console.Write(introPrompt);
             Console.ResetColor();
             Console.ReadLine();
@@ -105,13 +103,13 @@ namespace Tramwrecked
                 }
                 if (choice == "2" || choice == "2." || choice == "INSTRUCTIONS" || choice == "instructions" || choice == "2. INSTRUCTIONS")
                 {
-                    Console.WriteLine("As you might've guessed.. From here on out, are the tram driver.");
+                    Console.WriteLine("In this game you will play the roll of tram driver #992 at the Gothenburg Tramway.");
                     Console.WriteLine("Your mission is to get to your destination on time while trying");
                     Console.WriteLine("not to run over anyone coming your way and keeping your psyche in check.");
                     Console.WriteLine("Your will be driving the famous number 11 from Komettorget Bergsjön");
-                    Console.WriteLine("all the way over to our final, coastal destination Saltholmen.");
-                    Console.WriteLine("Make wise decisions and stay on time or the commuters with their");
-                    Console.WriteLine("boat connection to Saltholmen will certainly have your head.");
+                    Console.WriteLine("all the way over to the final destination Saltholmen.");
+                    Console.WriteLine("Make wise decisions and stay on time or the hot headed commuters with their");
+                    Console.WriteLine("boat connection to Saltholmen will certainly have you running for the hills.");
                     Console.WriteLine("Good luck, amigo!");
                     Console.ReadKey();
                     Console.Clear();
@@ -153,11 +151,11 @@ namespace Tramwrecked
         {
             Random random = new Random();
             string[] catchphraseArray =  {
-                "'Don't happy be worry!'",
+                "'Hasta la vista, baby!'",
                 "'Computer says no..'",
-                "'Life's a garden - dig it!'",
+                "'Sashay away!'",
                 "'You talkin' to me?'",
-                "'Yada, yada, yada.'",
+                "'I've made a huge mistake.'",
 
             };
 
@@ -222,7 +220,8 @@ namespace Tramwrecked
                         Console.WriteLine("Oh, no! Once the kid reaches you he parks himself by the door");
                         Console.WriteLine("waiting for his other friends to join from half a mile away.");
                         Console.WriteLine("You depart 5 minutes late and your tardiness dominoes the rest of the way.");
-                        Console.WriteLine("Press 'Enter' to continue.");
+                        Console.WriteLine("No chance you can make it on time and your boss questions your capability.");
+                        Console.WriteLine("What a bummer. :(");
                         Console.ResetColor();
                         Console.ReadLine();
                         gameOver();
@@ -244,9 +243,9 @@ namespace Tramwrecked
                 case "c":
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("You don't pay attention to the automatic doors and sensors.");
-                        Console.WriteLine("The kid gets mushed between them and everyone on board seem to");
-                        Console.WriteLine("think that you might've done it on purpose and you feel like jerk.");
+                        Console.WriteLine("You don't pay attention to the automatic doors and their sensors.");
+                        Console.WriteLine("Right as the kid steps in the doors decide to shut and squeeze him.");
+                        Console.WriteLine("Those on board seem to think that you did it on purpose and you feel like jerk.");
                         Console.ResetColor();
                         Console.ReadLine();
                         secondEncounter();
@@ -277,7 +276,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (. .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -309,9 +308,10 @@ namespace Tramwrecked
             Console.WriteLine("C - 'That's a really good question. I have no idea, sorry.'");
             Console.WriteLine("----------------");
             Console.ResetColor();
+            Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -320,6 +320,7 @@ namespace Tramwrecked
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("It takes alot of patience to pull that one off. Great job!");
+                        Console.WriteLine("*-(￣▽￣)-*");
                         Console.ResetColor();
                         Console.ReadLine();
                         thirdEncounter();
@@ -371,7 +372,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -447,14 +448,14 @@ namespace Tramwrecked
             Console.WriteLine("WHAT DO YOU DO?");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
-            Console.WriteLine("A - You look critically at the drawing and throw it in the bin.");
-            Console.WriteLine("B - You smile and say that you have a surprise at the next stop.");
+            Console.WriteLine("A - You take a disappointed glance at the drawing and throw it in the trash.");
+            Console.WriteLine("B - You smile and say that you have a surprise for them at the next stop.");
             Console.WriteLine("C - You barely look at it, stare at the passenger, chew it up and swallow it.");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             if (choice == "A" || choice == "a")
             {
@@ -472,7 +473,7 @@ namespace Tramwrecked
                 Console.WriteLine("Oh, no! The passenger did not take this very well.");
                 Console.WriteLine("On his way out you got handed a final drawing:");
                 Console.Write(answerDrawing);
-                Console.WriteLine("Now you'll have to change your address + phone number. Bummer.");
+                Console.WriteLine("Now you have to change your address + phone number. Yikes.");
                 Console.ResetColor();
                 Console.ReadKey();
                 fourthEncounter();
@@ -490,8 +491,8 @@ namespace Tramwrecked
             else if (choice == "C" || choice == "c")
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Oh, no! He mirrors you and picks up some other random paper to eat up.");
-                Console.WriteLine("He starts choking but you save him with some good ole heimlich. Phew!");
+                Console.WriteLine("Oh, no! He mirrors you and picks up a random piece of paper to chew up.");
+                Console.WriteLine("He starts choking but you quickly save him with some good ole heimlich. Phew!");
                 Console.ResetColor();
                 Console.ReadKey();
                 fourthEncounter();
@@ -521,7 +522,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                 ";
+                                                                              ";
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(deadEnd);
                 Console.ResetColor();
@@ -538,10 +539,10 @@ namespace Tramwrecked
             string choice;
 
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("4. POSITION: SKF facing Gamlestadstorget.");
             Console.ResetColor();
-            Console.WriteLine("SITUATION: A passenger gets onboard through the front door where she takes a seat with her dog.");
+            Console.WriteLine("STATUS: A passenger gets onboard through the front door where she takes a seat with her dog.");
             Console.WriteLine("You inform all passengers through the speakers on allergies and how pets are allowed in the back.");
             Console.WriteLine("The woman who very much heard what you said is ignoring you, front and center, with the dog.\n");
             Console.WriteLine("WHAT DO YOU DO?");
@@ -555,7 +556,7 @@ namespace Tramwrecked
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -620,7 +621,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -639,7 +640,7 @@ namespace Tramwrecked
             string choice;
 
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("5. POSITION: Centralstationen facing Brunnsparken.");
             Console.ResetColor();
             Console.WriteLine("STATUS: It's a beautiful, hot summer's day in Gothenburg! Ahead of you");
@@ -655,7 +656,7 @@ namespace Tramwrecked
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -723,7 +724,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -743,7 +744,7 @@ namespace Tramwrecked
             string choice;
 
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("6. POSITION: Groensakstorget facing Hagakyrkan.");
             Console.ResetColor();
             Console.WriteLine("STATUS: You are at the tram stop with open doors. You look at your monitor");
@@ -759,7 +760,7 @@ namespace Tramwrecked
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -823,7 +824,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -856,7 +857,7 @@ namespace Tramwrecked
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("7. POSITION: Masthuggstorget facing Stigbergstorget.");
             Console.ResetColor();
-            Console.WriteLine("STATUS: A person gets on your tram and asks you the following question:");
+            Console.WriteLine("STATUS: A passenger comes up and says to you:");
             Console.WriteLine(randomLanguage);
             Console.WriteLine("");
             Console.WriteLine("WHAT DO YOU DO?");
@@ -869,7 +870,7 @@ namespace Tramwrecked
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -931,7 +932,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -966,7 +967,7 @@ namespace Tramwrecked
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -974,7 +975,7 @@ namespace Tramwrecked
                 case "a":
                     {   // Final sudden Game Over 3.
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("That thing is jam packed with a totally lethal amount of electricity! What are you doing?");
+                        Console.WriteLine("That thing is packed with a lethal amount of electricity! What are you doing?");
                         Console.WriteLine("You get rushed to the emergency room and they manage to save your crazy butt.");
                         Console.WriteLine("No more tram driving for you!");
                         Console.ReadKey();
@@ -1030,7 +1031,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -1065,7 +1066,7 @@ namespace Tramwrecked
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             while (true)
             {
@@ -1121,7 +1122,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write(deadEnd);
                     Console.ResetColor();
@@ -1138,7 +1139,7 @@ namespace Tramwrecked
         {
             Console.Clear();
             string choice;
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("10. POSITION: Hagen facing Tranered.");
             Console.ResetColor();
             Console.WriteLine("STATUS: Right before your about to depart from the tram stop");
@@ -1151,13 +1152,13 @@ namespace Tramwrecked
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("----------------");
             Console.WriteLine("A - 'Strollers are baby carriers, not weapons of mass destruction. What's the number to Bris?'");
-            Console.WriteLine("B - You can't hear the sound of all this ruckus over the sound of you winning this console game.");
+            Console.WriteLine("B - You can't hear the sound of all the ruckus over the sound of you winning this console game.");
             Console.WriteLine("C - You shut down the door control fuse and hustle all the way to Saltholmen in full speed.");
             Console.WriteLine("----------------");
             Console.ResetColor();
             Console.Write("CHOICE: ");
             choice = Console.ReadLine();
-            Console.ReadKey();
+            Console.Clear();
 
             switch (choice)
             {
@@ -1174,7 +1175,7 @@ namespace Tramwrecked
                         Console.WriteLine("You went to heaven and now you're an angel! Wow!");
                         Console.WriteLine("That man did not share your sense of humour, I'll tell you that!");
                         Console.WriteLine("The commuters to Saltholmen might not have had your head today but unfortunately");
-                        Console.WriteLine("this man sure darn diddly did. He was the city's most wanted stroller harpoon serial killer.");
+                        Console.WriteLine("this man sure darn diddly did. It was the city's infamous wanted 'stroller serial killer'.");
                         Console.WriteLine("At least you don't have to drive people around anymore 'cause wings are so fetch in heaven.");
                         Console.Write(angel);
                         Console.ResetColor();
@@ -1241,7 +1242,7 @@ namespace Tramwrecked
                                                        || |     ..-- 
                                                       )|| | _.-
                                                      (  .-'
-                    ";
+                                                                              ";
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(deadEnd);
                         Console.ResetColor();
@@ -1276,7 +1277,7 @@ namespace Tramwrecked
 
                               Press 'Enter/Return' to try again.
 
-            ";
+                                                                                ";
             Console.Write(endTitle);
             Console.ResetColor();
             Console.ReadLine();
@@ -1301,7 +1302,7 @@ namespace Tramwrecked
 
 
                             Press 'Enter/Return' to play again.
-             ";
+                                                                                ";
             Console.Write(winTitle);
             Console.ResetColor();
             Console.ReadLine();
