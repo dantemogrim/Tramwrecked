@@ -17,7 +17,7 @@ Inspired by four years of working as a tram driver and watching movies like Taxi
 
 ## :checkered_flag: Creator
 
-[Dante Mogrim](https://github.com/mogrim-91)
+[Dante Mogrim](https://github.com/dantemogrim)
 
 ## :ticket: License
 
